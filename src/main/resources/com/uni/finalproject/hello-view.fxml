@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="934.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uni.finalproject.NavController">
+      <Pane prefHeight="35.0" prefWidth="934.0" style="-fx-background-color: #ebebeb;">
+            <Label layoutX="159.0" layoutY="9.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="nameField" layoutX="202.0" layoutY="5.0" prefHeight="0.0" prefWidth="159.0" promptText="Enter name" />
+            <Button layoutX="372.0" layoutY="5.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="25.0" prefWidth="50.0" text="Add" />
+            <Button layoutX="436.0" layoutY="5.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete" />
+            <Button layoutX="499.0" layoutY="5.0" mnemonicParsing="false" onAction="#onLookupButtonClick" text="Lookup" />
+      </Pane>
+      <Pane layoutY="35.0" prefHeight="493.0" prefWidth="175.0" style="-fx-background-color: #ebebeb;">
+            <TextField fx:id="statusField" layoutX="13.0" layoutY="145.0" promptText="Enter status" />
+            <TextField fx:id="imageField" layoutX="13.0" layoutY="222.0" promptText="Enter image" />
+            <TextField fx:id="friendField" layoutX="13.0" layoutY="298.0" promptText="Enter name" />
+            <Button layoutX="13.0" layoutY="179.0" mnemonicParsing="false" onAction="#onSetStatusButtonClick" prefHeight="25.0" prefWidth="149.0" text="Change Status" />
+            <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#onSetImageButtonClick" prefHeight="25.0" prefWidth="149.0" text="Change Picture" />
+            <Button layoutX="11.0" layoutY="331.0" mnemonicParsing="false" onAction="#onAddFriendButtonClick" prefHeight="43.0" prefWidth="74.0" text="Add Friend" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="90.0" layoutY="331.0" mnemonicParsing="false" onAction="#onRemoveFriendButtonClick" prefHeight="43.0" prefWidth="74.0" text="Remove Friend" textAlignment="CENTER" wrapText="true" />
+      </Pane>
+      <Pane fx:id="contentPane" layoutX="175.0" layoutY="35.0" prefHeight="493.0" prefWidth="759.0">
+            <Label fx:id="nameLabel" layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="232.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profileImage" fitHeight="232.0" fitWidth="232.0" layoutX="14.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="statusLabel" layoutX="11.0" layoutY="306.0" prefHeight="17.0" prefWidth="232.0" />
+            <VBox fx:id="friendsVBox" layoutX="586.0" layoutY="37.0" prefHeight="326.0" prefWidth="159.0" />
+            <Label fx:id="messagesLabel" layoutX="19.0" layoutY="444.0" prefHeight="35.0" prefWidth="721.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="listLabel" layoutX="586.0" layoutY="6.0" prefHeight="25.0" prefWidth="159.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+      </Pane>
+</Pane>
